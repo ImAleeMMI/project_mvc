@@ -16,4 +16,3 @@ class ProductController
         require_once APP_ROOT . '/views/product.php';
 	}
 }
-?>

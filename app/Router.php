@@ -1,7 +1,8 @@
-<?php 
+<?php
 
 namespace App;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
@@ -14,6 +15,7 @@ class Router
     public function __invoke(RouteCollection $routes)
     {
         $context = new RequestContext();
+        $context->fromRequest(Request::createFromGlobals());
 
         // Routing can match routes with incoming requests
         $matcher = new UrlMatcher($routes, $context);
@@ -53,4 +55,3 @@ class Router
 // Invoke
 $router = new Router();
 $router($routes);
-?>
