@@ -17,11 +17,10 @@
 	<section>
 		<h1>Homepage</h1>
 		<p>
-            <a href="<?= $routeToRestaurant ?>">Check the first product</a>
-            <a href="<?= $routeToReservation ?>">Check the first product</a>
-            <a href="<?= $routeToReview ?>">Check the first product</a>
+            <a href="<?= $routeToRestaurant ?>" class="link-underline-dark">Check the Restaurant</a><br>
+            <a href="<?= $routeToReservation ?>" class="link-underline-dark">Check the Reservation</a><br>
+            <a href="<?= $routeToReview ?>" class="link-underline-dark">Check the Review</a>
         </p>
-
 	<section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 

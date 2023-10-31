@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.png">
-    <title>Simple PHP MVC</title>
+    <title>Reservation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -17,11 +17,12 @@
     <section>
         <h1>Ristorante:</h1>
         <ul>
-            <li><?php echo $product->getTitle(); ?></li>
-            <li><?php echo $product->getDescription(); ?></li>
-            <li><?php echo $product->getPrice(); ?></li>
-            <li><?php echo $product->getSku(); ?></li>
-            <li><?php echo $product->getImage(); ?></li>
+            <li><?php echo $product->getId(); ?></li>
+            <li><?php echo $product->getFirst_last_name(); ?></li>
+            <li><?php echo $product->getData_reservation(); ?></li>
+            <li><?php echo $product->getHours(); ?></li>
+            <li><?php echo $product->getPeopol(); ?></li>
+
         </ul>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     <section>

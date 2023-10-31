@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\Restaurant;
 use Symfony\Component\Routing\RouteCollection;
 
-class ProductController
+class RestaurantController
 {
     // Show the product attributes based on the id.
 	public function showAction(int $id, RouteCollection $routes)

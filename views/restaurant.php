@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.png">
-    <title>Simple PHP MVC</title>
+    <title>Ristorante da Mario </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -17,11 +17,11 @@
     <section>
         <h1>Ristorante:</h1>
         <ul>
-            <li><?php echo $product->getTitle(); ?></li>
-            <li><?php echo $product->getDescription(); ?></li>
-            <li><?php echo $product->getPrice(); ?></li>
-            <li><?php echo $product->getSku(); ?></li>
-            <li><?php echo $product->getImage(); ?></li>
+            <li><?php echo $restaurant->getId(); ?></li>
+            <li><?php echo $restaurant->getRestaurant_name(); ?></li>
+            <li><?php echo $restaurant->getAdress(); ?></li>
+            <li><?php echo $restaurant->getTel(); ?></li>
+            <li><?php echo $restaurant->getTime(); ?></li>
         </ul>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     <section>
