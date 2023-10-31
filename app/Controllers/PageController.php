@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\Product;
 use Symfony\Component\Routing\RouteCollection;
 
 class PageController
@@ -10,7 +9,9 @@ class PageController
     // Homepage action
 	public function indexAction(RouteCollection $routes)
 	{
-		$routeToProduct = str_replace('{id}', 1, $routes->get('product')->getPath());
+		$routeToReservation = str_replace('{id}', 1, $routes->get('reservation')->getPath());
+		$routeToRestaurant = str_replace('{id}', 1, $routes->get('restaurant')->getPath());
+		$routeToReview = str_replace('{id}', 1, $routes->get('review')->getPath());
 
         require_once APP_ROOT . '/views/home.php';
 	}

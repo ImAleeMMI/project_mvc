@@ -15,7 +15,7 @@
 <body>
 
     <section>
-        <h1>My Product:</h1>
+        <h1>Recensioni:</h1>
         <ul>
             <li><?php echo $product->getTitle(); ?></li>
             <li><?php echo $product->getDescription(); ?></li>
