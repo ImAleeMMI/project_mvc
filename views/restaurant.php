@@ -15,7 +15,7 @@
 <body>
 
     <section>
-        <h1>Ristorante:</h1>
+        <h1>Restaurant:</h1>
         <ul>
             <li><?php echo $restaurant->getId(); ?></li>
             <li><?php echo $restaurant->getRestaurant_name(); ?></li>

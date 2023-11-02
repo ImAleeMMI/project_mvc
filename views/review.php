@@ -8,19 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.png">
-    <title>Simple PHP MVC</title>
+    <title>Review - Ristorante da Mario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
 
     <section>
-        <h1>Recensioni:</h1>
+        <h1>Review:</h1>
         <ul>
-            <li><?php echo $product->getId(); ?></li>
-            <li><?php echo $product->getName_client(); ?></li>
-            <li><?php echo $product->getVote(); ?></li>
-            <li><?php echo $product->getComment(); ?></li>
+            <li><?php echo $review->getId(); ?></li>
+            <li><?php echo $review->getName_client(); ?></li>
+            <li><?php echo $review->getVote(); ?></li>
+            <li><?php echo $review->getComment(); ?></li>
         </ul>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>
     <section>

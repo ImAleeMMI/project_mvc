@@ -10,7 +10,7 @@ class Reservation
 	protected $data_reservation;
 	protected $hours;
 	protected $peopol;
-	protected const TABLE = 'reservation';
+	protected const TABLE = 'prenotazioni';
 	
     // GET METHODS
 	public function getId(){ return $this->id; }
@@ -40,14 +40,15 @@ class Reservation
 	
 	public function read(int $id)
 	{
-		$query = "SELECT * FROM reservation id = $id";
+		$query = "SELECT * FROM ".self::TABLE." WHERE id = $id";
 		$db = new DB();
 		$result = $db->select($query);
-		self::setId($result[0]['id']);
-		self::setFirst_last_name($result[1]['nome_cognome']);
-		self::setData_reservation($result[2]['data']);
-		self::setHours($result[3]['orario']);
-		self::setPeopol($result[4]['persone']);
+		$result = $result[0];
+		self::setId($result['id']);
+		self::setFirst_last_name($result['nome_cognome']);
+		self::setData_reservation($result['data']);
+		self::setHours($result['orario']);
+		self::setPeopol($result['persone']);
 	}
 	
 	public function update(int $id, array $data) { }

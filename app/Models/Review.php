@@ -9,7 +9,7 @@ class Review
 	protected $name_client;
 	protected $vote;
 	protected $comment;
-	protected const TABLE = 'review';
+	protected const TABLE = 'recensioni';
 
     // GET METHODS
 	public function getId() { return $this->id; }
@@ -34,13 +34,14 @@ class Review
 	
 	public function read(int $id)
 	{
-		$query = "SELECT * FROM self::TABLE WHERE id = $id";
+		$query = "SELECT * FROM ".self::TABLE." WHERE id = $id";
 		$db = new DB();
 		$result = $db->select($query);
-		self::setId($result[0]['id']);
-		self::setName_client($result[1]['nome_cliente']);
-		self::setVote($result[2]['voto']);
-		self::setComment($result[3]['commento']);
+		$result = $result[0];
+		self::setId($result['id']);
+		self::setName_client($result['nome_cliente']);
+		self::setVote($result['voto']);
+		self::setComment($result['commento']);
 	}
 	
 	public function update(int $id, array $data) { }

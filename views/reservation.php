@@ -8,20 +8,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.png">
-    <title>Reservation</title>
+    <title>Reservation - Ristorante da Mario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
 
     <section>
-        <h1>Ristorante:</h1>
+        <h1>Reservation:</h1>
         <ul>
-            <li><?php echo $product->getId(); ?></li>
-            <li><?php echo $product->getFirst_last_name(); ?></li>
-            <li><?php echo $product->getData_reservation(); ?></li>
-            <li><?php echo $product->getHours(); ?></li>
-            <li><?php echo $product->getPeopol(); ?></li>
+            <li><?php echo $reservation->getId(); ?></li>
+            <li><?php echo $reservation->getFirst_last_name(); ?></li>
+            <li><?php echo $reservation->getData_reservation(); ?></li>
+            <li><?php echo $reservation->getHours(); ?></li>
+            <li><?php echo $reservation->getPeopol(); ?></li>
 
         </ul>
         <a href="<?php echo $routes->get('homepage')->getPath(); ?>">Back to homepage</a>

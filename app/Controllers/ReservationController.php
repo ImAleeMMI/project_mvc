@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\Reservation;
 use Symfony\Component\Routing\RouteCollection;
 
-class ProductController
+class ReservationController
 {
     // Show the product attributes based on the id.
 	public function showAction(int $id, RouteCollection $routes)
